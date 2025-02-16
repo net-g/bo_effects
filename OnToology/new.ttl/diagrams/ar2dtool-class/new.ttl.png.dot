@@ -1,0 +1,21 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "foaf:Agent" "xsd:Date" "http://www.co-ode.org/ontologies/ont.owl#Industry" "bods:Party" "bods:OwnershipCtrlStatement" "bods:Interest" "bods:Entity" ; /*classes style*/
+	"urn:absolute:boeff" -> "urn:absolute:boeff" [ label = "owl:versionIRI" ];
+	"bods:Party" -> "foaf:Agent" [ label = "owl:equivalentClass" ];
+	"bods:OwnershipCtrlStatement" -> "rdfs:Literal" [ label = "bods:OwnershipCtrlStatementId" ];
+	"bods:OwnershipCtrlStatement" -> "bods:Entity" [ label = "bods:hasSubject" ];
+	"bods:Entity" -> "bods:Party" [ label = "bods:isOwnedOrControlledBy" ];
+	"bods:Interest" -> "rdfs:Literal" [ label = "bods:interestType" ];
+	"http://www.co-ode.org/ontologies/ont.owl#Industry" -> "xsd:double" [ label = "http://www.co-ode.org/ontologies/ont.owl#industryBeta" ];
+	"http://www.co-ode.org/ontologies/ont.owl#Industry" -> "rdfs:Literal" [ label = "http://www.co-ode.org/ontologies/ont.owl#industryCode" ];
+	"bods:OwnershipCtrlStatement" -> "bods:Party" [ label = "bods:hasInterestedParty" ];
+	"bods:Interest" -> "xsd:Date" [ label = "bods:startDate" ];
+	"bods:OwnershipCtrlStatement" -> "bods:Interest" [ label = "bods:statesInterest" ];
+	"bods:Interest" -> "rdfs:Literal" [ label = "bods:sharesExact" ];
+	"bods:Entity" -> "http://www.co-ode.org/ontologies/ont.owl#Industry" [ label = "http://www.co-ode.org/ontologies/ont.owl#hasIndustry" ];
+	"bods:Party" -> "bods:Entity" [ label = "bods:ownsOrControls" ];
+	"bods:Interest" -> "xsd:Date" [ label = "bods:endDate" ];
+
+}
