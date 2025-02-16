@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:absolute:boeff#"
+     xml:base="urn:absolute:boeff"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="urn:absolute:boeff">
+        <owl:versionIRI rdf:resource="urn:absolute:boeff"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/endDate -->
+
+
+    <owl:ObjectProperty rdf:about="http://bods.openownership.org/vocabulary/endDate">
+        <rdfs:domain rdf:resource="http://bods.openownership.org/vocabulary/Interest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/hasInterestedParty -->
+
+
+    <owl:ObjectProperty rdf:about="http://bods.openownership.org/vocabulary/hasInterestedParty">
+        <owl:inverseOf rdf:resource="http://bods.openownership.org/vocabulary/isInterestedPartyOf"/>
+        <rdfs:domain rdf:resource="http://bods.openownership.org/vocabulary/OwnershipCtrlStatement"/>
+        <rdfs:range rdf:resource="http://bods.openownership.org/vocabulary/Party"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/hasSubject -->
+
+
+    <owl:ObjectProperty rdf:about="http://bods.openownership.org/vocabulary/hasSubject">
+        <owl:inverseOf rdf:resource="http://bods.openownership.org/vocabulary/isSubjectOf"/>
+        <rdfs:domain rdf:resource="http://bods.openownership.org/vocabulary/OwnershipCtrlStatement"/>
+        <rdfs:range rdf:resource="http://bods.openownership.org/vocabulary/Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/isInterestedPartyOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://bods.openownership.org/vocabulary/isInterestedPartyOf"/>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/isOwnedOrControlledBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://bods.openownership.org/vocabulary/isOwnedOrControlledBy">
+        <owl:inverseOf rdf:resource="http://bods.openownership.org/vocabulary/ownsOrControls"/>
+        <rdfs:domain rdf:resource="http://bods.openownership.org/vocabulary/Entity"/>
+        <rdfs:range rdf:resource="http://bods.openownership.org/vocabulary/Party"/>
+        <rdfs:label>Party with ownership or control over this entity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/isSubjectOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://bods.openownership.org/vocabulary/isSubjectOf"/>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/ownsOrControls -->
+
+
+    <owl:ObjectProperty rdf:about="http://bods.openownership.org/vocabulary/ownsOrControls">
+        <rdfs:domain rdf:resource="http://bods.openownership.org/vocabulary/Party"/>
+        <rdfs:range rdf:resource="http://bods.openownership.org/vocabulary/Entity"/>
+        <rdfs:label>Ownership or control in an entity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/startDate -->
+
+
+    <owl:ObjectProperty rdf:about="http://bods.openownership.org/vocabulary/startDate">
+        <rdfs:domain rdf:resource="http://bods.openownership.org/vocabulary/Interest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/statesInterest -->
+
+
+    <owl:ObjectProperty rdf:about="http://bods.openownership.org/vocabulary/statesInterest">
+        <rdfs:domain rdf:resource="http://bods.openownership.org/vocabulary/OwnershipCtrlStatement"/>
+        <rdfs:range rdf:resource="http://bods.openownership.org/vocabulary/Interest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasIndustry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasIndustry">
+        <rdfs:domain rdf:resource="http://bods.openownership.org/vocabulary/Entity"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Industry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/OwnershipCtrlStatementId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bods.openownership.org/vocabulary/OwnershipCtrlStatementId">
+        <rdfs:domain rdf:resource="http://bods.openownership.org/vocabulary/OwnershipCtrlStatement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/interestType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bods.openownership.org/vocabulary/interestType">
+        <rdfs:domain rdf:resource="http://bods.openownership.org/vocabulary/Interest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/sharesExact -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bods.openownership.org/vocabulary/sharesExact">
+        <rdfs:domain rdf:resource="http://bods.openownership.org/vocabulary/Interest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#industryBeta -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#industryBeta">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Industry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#industryCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#industryCode">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Industry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/Entity -->
+
+
+    <owl:Class rdf:about="http://bods.openownership.org/vocabulary/Entity">
+        <rdfs:subClassOf rdf:resource="http://bods.openownership.org/vocabulary/Party"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/Interest -->
+
+
+    <owl:Class rdf:about="http://bods.openownership.org/vocabulary/Interest"/>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/OwnershipCtrlStatement -->
+
+
+    <owl:Class rdf:about="http://bods.openownership.org/vocabulary/OwnershipCtrlStatement"/>
+    
+
+
+    <!-- http://bods.openownership.org/vocabulary/Party -->
+
+
+    <owl:Class rdf:about="http://bods.openownership.org/vocabulary/Party">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Industry -->
+
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Industry"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#Date -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#Date"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
